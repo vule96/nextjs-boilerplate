@@ -11,7 +11,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky",
-    "commit": "cz"
+    "commit": "cz",
+    "doctor": "npx -y react-doctor@latest ."
   },
   "dependencies": {
     "next": "16.2.0",
