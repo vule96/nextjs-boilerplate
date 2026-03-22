@@ -1,0 +1,17 @@
+# Lefthook Git Hooks Configuration
+# https://github.com/evilmartians/lefthook
+
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '*.{ts,tsx,js,jsx}'
+      run: eslint --fix {staged_files} && git add {staged_files}
+    format:
+      glob: '*.{ts,tsx,js,jsx,json,css,md}'
+      run: prettier --write {staged_files} && git add {staged_files}
+
+commit-msg:
+  commands:
+    commitlint:
+      run: commitlint --edit {1}
