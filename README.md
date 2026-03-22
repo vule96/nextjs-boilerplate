@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 - Next.js 16 + React 19 + TypeScript
 - Tailwind CSS 4
-- ESLint + Prettier + Husky + lint-staged
+- ESLint + Prettier + Lefthook + Knip
 - Conventional Commits
 
 ## Getting Started

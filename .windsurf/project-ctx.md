@@ -12,21 +12,21 @@ always_apply: true
 - TypeScript 5
 - Tailwind CSS 4
 - ESLint 9 + Prettier
-- Husky + lint-staged + commitlint
+- Lefthook + commitlint
 
 ## Project Structure
 
 - `/app` - Next.js App Router
 - `/components` - React components
 - `/lib` - Utilities, helpers
-- `/.husky` - Git hooks
 - `/.vscode` - VS Code settings
 
 ## Code Standards
 
 - Conventional Commits (feat:, fix:, chore:, docs:, style:, refactor:, test:)
 - ESLint + Prettier auto-format on save
-- Pre-commit hooks: lint-staged + commitlint
+- Pre-commit hooks: lefthook (lint + format + knip)
+- Pre-push hooks: type check
 
 ## Best Practices to Apply
 

@@ -6,12 +6,19 @@ pre-commit:
   commands:
     lint:
       glob: '*.{ts,tsx,js,jsx}'
-      run: eslint --fix {staged_files} && git add {staged_files}
+      run: yarn lint:fix {staged_files} && git add {staged_files}
     format:
       glob: '*.{ts,tsx,js,jsx,json,css,md}'
-      run: prettier --write {staged_files} && git add {staged_files}
+      run: yarn format {staged_files} && git add {staged_files}
+    knip:
+      run: yarn check:deps
 
 commit-msg:
   commands:
     commitlint:
-      run: commitlint --edit {1}
+      run: npx commitlint --edit {1}
+
+pre-push:
+  commands:
+    check-types:
+      run: yarn check:types

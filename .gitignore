@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# lefthook (tạo .husky/ cho tương thích ngược)
+.husky/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -79,17 +79,21 @@ git commit -m "feat: add new feature"
 
 ## Git Hooks
 
-Dự án sử dụng Husky để chạy các hooks:
+Dự án sử dụng Lefthook để chạy các hooks:
 
 ### Pre-commit
 
-- Chạy ESLint + Prettier trên các file staged
+- Chạy ESLint + Prettier + Knip trên các file staged
 - Nếu có lỗi không fix được, commit sẽ bị block
 
 ### Commit-msg
 
 - Validate commit message theo conventional commits
 - Nếu không đúng format, commit sẽ bị block
+
+### Pre-push
+
+- Chạy TypeScript type check trước khi push
 
 ## Scripts
 
